@@ -4,27 +4,45 @@
   --gray-color: #eeeeee;
   --black-color: #222222;
 }
+
 body {
   font-family: "Cairo", sans-serif;
 }
+
 .navbar-brand {
   font-family: "Noto Nastaliq Urdu", serif !important;
 }
+
+nav .container-lg,
+nav .container-fluid {
+  align-items: normal !important;
+}
+
+.collapse ul {
+  padding: 0;
+  margin: 0 0 0 -12px;
+}
+
 .ms-n5 {
   margin-left: -40px;
 }
+
 .z-3 {
   z-index: 1000 !important;
 }
+
 .input-group span button {
   background-color: var(--main-color) !important;
 }
+
 .input-group span button:hover {
   background-color: var(--black-color) !important;
 }
+
 .input-group span button i {
   color: white !important;
 }
+
 .carousel-item img {
   height: 600px;
 }
@@ -34,24 +52,8 @@ body {
 }
 
 
-
-
-
-
-/* old style */
-
 ul li a.active {
   color: var(--main-color) !important;
-}
-
-/* Custom CSS for Hover Effect */
-.navbar-nav .nav-item.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-/* Custom CSS to hide the dropdown arrow */
-.navbar-nav .nav-item.dropdown .nav-link::after {
-  display: none !important;
 }
 
 button {
@@ -64,40 +66,9 @@ button:hover {
   background-color: transparent !important;
 }
 
-.hero-banner::before {
-  content: "";
-  display: block;
-  width: 5%;
-  height: 100%;
-  background: var(--main-color);
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.hero-banner {
-  background: #f1f6f7 !important;
-  position: relative;
-  margin-bottom: 10px;
-}
-
-@media (min-width: 991px) {
-  .hero-banner::before {
-    width: 35%;
-  }
-}
-
-@media (min-width: 575px) {
-  .hero-banner::before {
-    width: 20%;
-  }
-}
-
 .pt_60px {
   padding-top: 60px;
 }
-
-
 
 a.button,
 .btn-subscribe {
@@ -129,29 +100,23 @@ a {
   text-decoration: none;
 }
 
-
-
-
-
 .my-5-3-rem {
   margin-top: 5rem !important;
   margin-bottom: 3rem !important;
 }
-
-
 
 .card-body .card-title:hover {
   cursor: pointer;
   color: var(--main-color);
 }
 
-
 /* footer */
 
-footer{
+footer {
   background-color: #415f5a;
 }
-footer a i{
+
+footer a i {
   color: #ffffff;
   text-decoration: none;
 
