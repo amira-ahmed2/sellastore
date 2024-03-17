@@ -1,14 +1,21 @@
-
+var allpro
 var xhr = new XMLHttpRequest();
-var data
 xhr.open('GET', 'https://amira-ahmed2.github.io/sellastore/data/db.json', true);
+// xhr.open('GET', 'http://localhost:3000/all_product', true);
+
 xhr.onreadystatechange = function () {
   if (xhr.readyState === 4) {
     if (xhr.status === 200) {
-      var data = JSON.parse(xhr.responseText);
+      let data = JSON.parse(xhr.responseText);
       // Use the data retrieved from the JSON file
-      displayProducts(data.products)
-      console.log(data.products);
+      allpro=data.all_product.childreen
+      forloops(data.men,data.wommen)
+    //   displayProducts(data.products)
+      displayProducts(allpro)
+    //   filterproductinwommen(data)
+       
+
+      console.log(allpro);
     } else {
       console.error('Request failed with status:', xhr.status);
     }
@@ -18,7 +25,16 @@ xhr.send();
 
 
 
+function forloops(w,m){
+    for (let i of m) {
+        allpro.push(i)
 
+      }
+      for (let i of w) {
+        allpro.push(i)
+
+      }
+}
 
 
 function displayProducts(products) {
@@ -41,33 +57,19 @@ function displayProducts(products) {
     });
   }
 
-
-
-document.addEventListener("DOMContentLoaded", function() {
-    var backToTopBtn = document.getElementById("back-to-top");
-    
-    window.addEventListener("scroll", function() {
-      if (window.scrollY > 100) {
-        backToTopBtn.style.display = "block";
-      } else {
-        backToTopBtn.style.display = "none";
-      }
-    });
-    
-    backToTopBtn.addEventListener("click", function() {
-      scrollToTop(800);
-    });
-  });
-  
-  function scrollToTop() {
-        scrollInterval = setInterval(function(){
-        if ( window.scrollY != 0 ) {
-            window.scrollBy( 0);
+function filterproductinwommen(data) {
+    let categorizedData = {};
+    data.forEach(function(item) {
+        if (!categorizedData[item.catg]) {
+            categorizedData[item.catg] = [];
         }
-        else clearInterval(scrollInterval); 
-    },15);
-  }
-  
+        categorizedData[item.catg].push(item);
+    });
+    console.log(categorizedData);
+
+}
+
+
 
   function go_to() {
     window.location.href = 'https://amira-ahmed2.github.io/sellastore/detiles.html';

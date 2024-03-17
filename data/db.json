@@ -1,62 +1,68 @@
 {
-  "products": [
-    {
-      "id": 1,
-      "img": "./images/products/poduct (1).jpg",
-      "catg": "Accessories",
-      "title": "Quartz Belt Watch",
-      "price": "150 جنيه"
-    },
-    {
-      "id": 2,
-      "img": "./images/products/poduct (2).jpg",
-      "catg": "Beauty",
-      "title": "Women Freshwash",
-      "price": "150 جنيه"
-    },
-    {
-      "id": 3,
-      "img": "./images/products/poduct (3).jpg",
-      "catg": "Decor",
-      "title": "Quartz Belt Watch",
-      "price": "150 جنيه"
-    },
-    {
-      "id": 4,
-      "img": "./images/products/poduct (4).jpg",
-      "catg": "Decor",
-      "title": "Room Flash Light",
-      "price": "150 جنيه"
-    },
-    {
-      "id": 11,
-      "img": "./images/products/poduct (5).jpg",
-      "catg": "Accessories",
-      "title": "Quartz Belt Watch",
-      "price": "150 جنيه"
-    },
-    {
-      "id": 12,
-      "img": "./images/products/poduct (6).jpg",
-      "catg": "Beauty",
-      "title": "Women Freshwash",
-      "price": "150 جنيه"
-    },
-    {
-      "id": 13,
-      "img": "./images/products/poduct (7).jpg",
-      "catg": "Decor",
-      "title": "Quartz Belt Watch",
-      "price": "150 جنيه"
-    },
-    {
-      "id": 14,
-      "img": "./images/products/poduct (8).jpg",
-      "catg": "Decor",
-      "title": "Room Flash Light",
-      "price": "150 جنيه"
-    }
-  ],
+  "all_product": {
+    "wommen": [
+      {
+        "id": 1,
+        "img": "./images/products/poduct (1).jpg",
+        "catg": "نسائي",
+        "title": "Quartz Belt Watch",
+        "price": "150 جنيه"
+      },
+      {
+        "id": 2,
+        "img": "./images/products/poduct (2).jpg",
+        "catg": "نسائي",
+        "title": "Women Freshwash",
+        "price": "150 جنيه"
+      },
+      {
+        "id": 14,
+        "img": "./images/products/poduct (8).jpg",
+        "catg": "نسائي",
+        "title": "Room Flash Light",
+        "price": "150 جنيه"
+      }
+    ],
+    "men": [
+      {
+        "id": 4,
+        "img": "./images/products/poduct (4).jpg",
+        "catg": "رجالي",
+        "title": "Room Flash Light",
+        "price": "150 جنيه"
+      },
+      {
+        "id": 11,
+        "img": "./images/products/poduct (5).jpg",
+        "catg": "رجالي",
+        "title": "Quartz Belt Watch",
+        "price": "150 جنيه"
+      },
+      {
+        "id": 13,
+        "img": "./images/products/poduct (7).jpg",
+        "catg": "رجالي",
+        "title": "Quartz Belt Watch",
+        "price": "150 جنيه"
+      }
+    ],
+    "childreen": [
+      {
+        "id": 12,
+        "img": "./images/products/poduct (6).jpg",
+        "catg": "اطفال",
+        "title": "Women Freshwash",
+        "price": "150 جنيه"
+      },
+      {
+        "id": 3,
+        "img": "./images/products/poduct (3).jpg",
+        "catg": "اطفال",
+        "title": "Quartz Belt Watch",
+        "price": "150 جنيه"
+      }
+    ]
+  },
   "admin": [
     { "id": 1, "name": "amira", "pass": 123 },
     { "id": 1, "name": "mody", "pass": 123 }
