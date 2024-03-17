@@ -174,13 +174,12 @@ const cardsContainer = document.getElementById('product-cards-container');
 
 function add_cards(id_element) {
     // إضافة الكاردز إلى الصفحة
-    if (id_element.id != "product-cards-latest-news") {
         listcards.forEach(card => {
             const cardHTML = `
         <div class="col">
         <div class="card h-100 border-1 ">
-          <img src="${card.img}" class="card-img-top shadow-shadow-sm  " alt="${card.title}">
-          <div class="card-body text-center">
+        <img src="${card.img}" class="card-img-top shadow-shadow-sm  " alt="${card.title}" onclick="go_to()" >
+        <div class="card-body text-center">
             <small class="card-title text-muted ">${card.catg}</small>
             <h5 class="card-title">${card.title}</h5>
             <h5 class="card-title text-muted ">${card.price}</h5>
@@ -191,29 +190,7 @@ function add_cards(id_element) {
       `;
             id_element.innerHTML += cardHTML;
         });
-    } else {
-        last_new.forEach(card => {
-            console.log(card.comments.length)
-            const cardHTML = `
-        <div class="col">
-        <div class="card h-100 border-0 ">
-          <img src="${card.img}" class="card-img-top" alt="${card.title}">
-          <div class="card-body">
-          <div class="d-flex flex-wrap align-items-center text-secondary ">
-            <p class="col-3"><small>By Admin</small></p>
-            <p class="col-6"><small><i class="ti-comments-smiley"></i> ${card.comments.length} Comments</small></p>
-          </div>
-            <h5 class="card-title">${card.title}</h5>
-            <p class="card-title text-muted ">${card.descriotion}</p>
-            <a class="card-blog__link" href="#">Read More <i class="ti-arrow-right"></i></a>
     
-          </div>
-        </div>
-      </div>
-      `;
-            id_element.innerHTML += cardHTML;
-        });
-    }
 }
 
 
@@ -246,4 +223,7 @@ document.addEventListener("DOMContentLoaded", function() {
     },15);
   }
   
-  
+
+  function go_to() {
+    window.location.href = 'http://127.0.0.1:5500/detiles.html'; // استبدل الرابط الجديد هنا
+}
