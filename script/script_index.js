@@ -227,7 +227,7 @@ document.addEventListener("DOMContentLoaded", function() {
 }
 
 var xhr = new XMLHttpRequest();
-xhr.open('GET', 'https://amira-ahmed2.github.io/sellastore/db.json', true);
+xhr.open('GET', 'https://amira-ahmed2.github.io/sellastore/data/db.json', true);
 xhr.onreadystatechange = function () {
   if (xhr.readyState === 4) {
     if (xhr.status === 200) {
