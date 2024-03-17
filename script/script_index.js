@@ -1,7 +1,7 @@
 const listcards = [
     {
         id: 1,
-        img: "./images/WhatsApp Image1.jpg",
+        img: "./images/New folder/imgpro (1).jpg",
         catg: "Accessories",
         title: "Quartz Belt Watch",
         price: "150 جنيه"
@@ -22,90 +22,90 @@ const listcards = [
     },
     {
         id: 4,
-        img: "./images/item-1.jpg",
+        img: "./images/New folder/imgpro (2).jpg",
         catg: "Decor",
         title: "Room Flash Light",
         price: "150 جنيه"
     },
     {
         id: 5,
-        img: "./images/item-7.jpg",
+        img: "./images/New folder/imgpro (3).jpg",
         catg: "Beauty",
         title: "Women Freshwash",
         price: "150 جنيه"
     },
     {
         id: 6,
-        img: "./images/item-6.jpg",
+        img: "./images/New folder/imgpro (4).jpg",
         catg: "Beauty",
         title: "Women Freshwash",
         price: "150 جنيه"
     },
     {
         id: 7,
-        img: "./images/item-5.jpg",
+        img: "./images/New folder/imgpro (5).jpg",
         catg: "Beauty",
         title: "Women Freshwash",
         price: "150 جنيه"
     },
     {
         id: 8,
-        img: "./images/item-8.jpg",
+        img: "./images/New folder/imgpro (6).jpg",
         catg: "Beauty",
         title: "Women Freshwash",
         price: "150 جنيه"
     },    {
         id: 9,
-        img: "./images/item-9.jpg",
+        img: "./images/New folder/imgpro (7).jpg",
         catg: "Accessories",
         title: "Quartz Belt Watch",
         price: "150 جنيه"
     },
     {
         id: 27,
-        img: "./images/item-10.jpg",
+        img: "./images/New folder/imgpro (8).jpg",
         catg: "Beauty",
         title: "Women Freshwash",
         price: "150 جنيه"
     },
     {
         id: 39,
-        img: "./images/item-11.jpg",
+        img: "./images/New folder/imgpro (9).jpg",
         catg: "Decor",
         title: "Quartz Belt Watch",
         price: "150 جنيه"
     },
     {
         id: 34,
-        img: "./images/item-12.jpg",
+        img: "./images/New folder/imgpro (10).jpg",
         catg: "Decor",
         title: "Room Flash Light",
         price: "150 جنيه"
     },
     {
         id: 95,
-        img: "./images/item-13.jpg",
+        img: "./images/New folder/imgpro (16).jpg",
         catg: "Beauty",
         title: "Women Freshwash",
         price: "150 جنيه"
     },
     {
         id: 86,
-        img: "./images/item-14.jpg",
+        img: "./images/New folder/imgpro (8).jpg",
         catg: "Beauty",
         title: "Women Freshwash",
         price: "150 جنيه"
     },
     {
         id: 78,
-        img: "./images/item-15.jpg",
+        img: "./images/New folder/imgpro (11).jpg",
         catg: "Beauty",
         title: "Women Freshwash",
         price: "150 جنيه"
     },
     {
         id: 89,
-        img: "./images/item-16.jpg",
+        img: "./images/New folder/imgpro (17).jpg",
         catg: "Beauty",
         title: "Women Freshwash",
         price: "150 جنيه"
@@ -168,8 +168,6 @@ last_new = [
     }
 ];
 const cardsContainer = document.getElementById('product-cards-container');
-// const cardsLatestNews = document.getElementById('product-cards-latest-news');
-// const cardsBastSellers = document.getElementById('product-cards-bast-sellers');
 
 
 function add_cards(id_element) {
@@ -178,7 +176,7 @@ function add_cards(id_element) {
             const cardHTML = `
         <div class="col">
         <div class="card h-100 border-1 ">
-        <img src="${card.img}" class="card-img-top shadow-shadow-sm  " alt="${card.title}" onclick="go_to()" >
+        <img src="${card.img}" height="300px;" class="card-img-top shadow-shadow-sm  "  alt="${card.title}" onclick="go_to()" >
         <div class="card-body text-center">
             <small class="card-title text-muted ">${card.catg}</small>
             <h5 class="card-title">${card.title}</h5>
