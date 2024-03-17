@@ -225,5 +225,5 @@ document.addEventListener("DOMContentLoaded", function() {
   
 
   function go_to() {
-    window.location.href = 'http://127.0.0.1:5500/detiles.html'; // استبدل الرابط الجديد هنا
+    window.location.href = 'https://amira-ahmed2.github.io/sellastore/detiles.html'; // استبدل الرابط الجديد هنا
 }
