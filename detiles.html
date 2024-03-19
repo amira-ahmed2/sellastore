@@ -116,8 +116,8 @@
                     <p>الوصف: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor, libero sit amet
                         tristique feugiat, magna augue malesuada nisi, ac fermentum felis odio eu nulla. Fusce et lectus
                         hendrerit, maximus odio non, fringilla tellus.</p>
-                    <button class="btn btn-secondary ">للطلب الذهاب للواتس</button>
-                    <a href="https://wa.me/+201007160510?text=أرغب في طلب المنتج رقم 456">اطلب الآن عبر واتساب</a>
+                    <button class="btn btn-secondary " onclick="go_to_whatsapp(1)">اطلب الآن عبر واتساب </button>
+                    <!-- <a href="https://wa.me/+201007160510?text=أرغب في طلب المنتج رقم 456" target="_blank">اطلب الآن عبر واتساب</a> -->
 
                 </div>
             </div>
@@ -130,16 +130,16 @@
 
   <footer class="text-center text-lg-start">
     <div class="container d-flex justify-content-center py-4 text-white flex-wrap ">
-      <a href="#" class="btn     mx-2">
+      <a href="https://wa.me/+201007160510" target="_blank" class="btn     mx-2">
         <i class="bi bi-facebook"></i>
       </a>
-      <a href="#" class="btn     mx-2">
+      <a href="https://wa.me/+201007160510" target="_blank" class="btn     mx-2">
         <i class="bi bi-whatsapp"></i>
       </a>
-      <a href="#" class="btn    mx-2">
+      <a href="https://wa.me/+201007160510" target="_blank" class="btn    mx-2">
         <i class="bi bi-instagram"></i>
       </a>
-      <a href="#" class="btn     mx-2">
+      <a href="https://wa.me/+201007160510" target="_blank" class="btn     mx-2" >
         <i class="bi bi-messenger"></i>
       </a>
     </div>
@@ -153,6 +153,11 @@
 
   <!-- End of .container -->
 <script>
+  function go_to_whatsapp(id) {
+    var productTitleElement = document.getElementById('product-title');
+    var productImageElement = document.getElementById('product-image');
+    location.href = `https://wa.me/+201007160510?text= أرغب في طلب المنتج  ${productTitleElement.innerText} \n ${productImageElement.src}`;
+  }
   
   var allProductsPromise = new Promise((resolve, reject) => {
     var xhr = new XMLHttpRequest();
