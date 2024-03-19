@@ -7,15 +7,9 @@ xhr.onreadystatechange = function () {
   if (xhr.readyState === 4) {
     if (xhr.status === 200) {
       let data = JSON.parse(xhr.responseText);
-      // Use the data retrieved from the JSON file
-    //   allpro=data.all_product
-    //   console.log(allpro);
-    //   forloops(data.men,data.wommen)
-    //   displayProducts(data.all_product)
         allProducts = data.all_product;
       displayProducts(allProducts,4)
       filterproductinwommen()
-       
 
     } else {
       console.error('Request failed with status:', xhr.status);
@@ -34,10 +28,10 @@ function displayProducts(products, limit) {
       var productHTML = `
         <div class="col">
           <div class="card h-100 border-1">
-            <img src="${card.img}" height="300px;" class="card-img-top shadow-shadow-sm" alt="${card.title}" onclick="go_to()">
+            <img src="${card.img}" height="300px;" class="card-img-top shadow-shadow-sm " alt="${card.title}" onclick="go_to(${card.id})">
             <div class="card-body text-center">
               <small class="card-title text-muted">${card.catg}</small>
-              <h5 class="card-title">${card.title}</h5>
+              <h5 class="card-title product" id="${card.id}">${card.title}</h5>
               <h5 class="card-title text-muted">${card.price}</h5>
             </div>
           </div>
@@ -72,10 +66,10 @@ function displayProducts(products, limit) {
       var productHTML = `
         <div class="col">
           <div class="card h-100 border-1">
-            <img src="${card.img}" height="300px;" class="card-img-top shadow-shadow-sm" alt="${card.title}" onclick="go_to()">
+            <img src="${card.img}" height="300px;" class="card-img-top shadow-shadow-sm" alt="${card.title}" id="${card.id}" onclick="go_to(${card.id})">
             <div class="card-body text-center">
               <small class="card-title text-muted">${card.catg}</small>
-              <h5 class="card-title">${card.title}</h5>
+              <h5 class="card-title product " >${card.title}</h5>
               <h5 class="card-title text-muted">${card.price}</h5>
             </div>
           </div>
@@ -112,6 +106,8 @@ function displayProducts(products, limit) {
 
 
 
-  function go_to() {
-    window.location.href = 'https://amira-ahmed2.github.io/sellastore/detiles.html';
+
+function go_to(id) {
+  location.href = `./detiles.html?id=${id}`;
 }
+
