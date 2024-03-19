@@ -166,8 +166,6 @@
       if (xhr.readyState === 4) {
         if (xhr.status === 200) {
           let data = JSON.parse(xhr.responseText);
-          console.log(data)
-
           resolve(data.all_product);
         } else {
           reject(new Error('Request failed with status:', xhr.status));
@@ -183,11 +181,9 @@
       const queryString = window.location.search;
       const urlParams = new URLSearchParams(queryString);
       const productId = urlParams.get('id'); // Assuming the parameter name is 'id'
-      console.log(productId)
 
       // Find the product details from the allProducts array based on the product ID
       const productDetails = allProducts.find(product => product.id == productId);
-      console.log(productDetails)
 
       // Display the product details on the page
       displayProductDetails(productDetails);
