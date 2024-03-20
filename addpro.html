@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إضافة منتج جديد</title>
+</head>
+<body>
+    <h1>إضافة منتج جديد</h1>
+    <form id="productForm" >
+        <!-- <label for="productName">اسم المنتج:</label>
+        <input type="text" id="productName" name="productName"><br><br>
+        
+        <label for="productPrice">السعر:</label>
+        <input type="text" id="productPrice" name="productPrice"><br><br> -->
+
+        <!-- <label for="img">تحميل الصورة:</label>
+<input type="file" id="img" name="img" accept="images/*"><br><br> -->
+
+<input type="file" id="imageInput">
+<button onclick="uploadImage()">رفع الصورة</button><br><br>
+
+        <!-- <button type="submit">إضافة المنتج</button> -->
+    </form>
+
+    <script>
+        function uploadImage() {
+            const fileInput = document.getElementById('imageInput');
+            const file = fileInput.files[0];
+          
+            if (file) {
+              const reader = new FileReader();
+              reader.onload = function(event) {
+                const base64String = event.target.result.split(',')[1]; // يستخرج الجزء الثاني من النص (الجزء الذي يحتوي على البيانات Base64)
+                
+                // إرسال الصورة المحولة إلى الخادم JSON
+                sendImageToServer(base64String);
+              };
+              reader.readAsDataURL(file);
+            } else {
+              console.error('لم يتم تحديد ملف.');
+            }
+          }
+          
+          function sendImageToServer(base64Image) {
+            // استخدام fetch API لإرسال الصورة باستخدام طلب POST
+            fetch('http://localhost:3000/all_product', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({ image: base64Image })
+            })
+            .then(response => {
+              if (!response.ok) {
+                throw new Error('حدث خطأ أثناء رفع الصورة.');
+              }
+              return response.json();
+            })
+            .then(data => {
+              console.log('تم رفع الصورة بنجاح.', data);
+            })
+            .catch(error => {
+              console.error('خطأ:', error);
+            });
+          }
+          
+    </script>
+</body>
+</html>

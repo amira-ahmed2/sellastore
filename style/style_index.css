@@ -58,12 +58,16 @@ ul li a.active {
 
 button {
   border-color: var(--gray-color) !important;
-  color: var(--black-color) !important;
+  color: white !important;
+}
+button i {
+  color: var(--main-color);
 }
 
 button:hover {
   border-color: var(--main-color) !important;
   background-color: transparent !important;
+  color: var(--main-color) !important;
 }
 
 .pt_60px {
@@ -133,4 +137,19 @@ a i:hover {
   bottom: 2rem;
   right: 20px;
   z-index: 1000;
+}
+
+/*  */
+#product-title {
+  font-size: 24px;
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+#product-price {
+  color: var(--main-color);
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
